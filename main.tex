@@ -1,0 +1,74 @@
+% !TeX root = main.tex
+\documentclass[a4paper, 12pt]{scrartcl}
+
+% Packages {{{
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[backend=biber, style=authoryear-icomp]{biblatex}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{lmodern}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage[german=guillemets]{csquotes}
+\usepackage{graphicx}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{blindtext}
+% }}}
+
+\addbibresource{main.bib}
+
+
+\author{Jasper Levin Spahl}
+\title{Place title here}
+\newcommand{\klasse}{12 Kss}
+\newcommand{\fach}{Test}
+\newcommand{\documentart}{Epochenheft}
+
+
+% fancy stuff {{{
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\slshape \MakeUppercase{\thetitle}\/}
+\fancyhead[R]{\slshape \theauthor{}\/}
+\fancyhead[C]{\thepage}
+% }}}
+
+% renew \maketitle {{{
+\renewcommand{\maketitle}{
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+\Large{\textbf{\fach}}\\
+\Large{\textbf{\documentart}}\\
+\vfill
+\line(1,0){400}\\[1mm]
+\huge{\textbf{\thetitle{} }}\\[3mm]
+\Large{\textbf{- \klasse\space -}}\\
+\line(1,0){400}\\
+\vfill
+\theauthor{}\\
+Klasse: \klasse\\
+\today\\
+\end{center}
+\end{titlepage}
+} % }}}
+
+\begin{document}
+% Titlepage and toc{{{
+\maketitle
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+%}}}
+
+
+%\printbibliography{}
+
+\end{document}
