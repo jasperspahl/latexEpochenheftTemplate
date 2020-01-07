@@ -4,19 +4,30 @@
 % Packages {{{
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
-\usepackage[backend=biber, style=authoryear-icomp]{biblatex}
-\usepackage{amsmath}
-\usepackage{wrapfig}
-\usepackage{lmodern}
+
+\usepackage[ngerman]{babel} % babel sorgt für die richtige Formatierung für die deutsche Sprache
+\usepackage[german=guillemets]{csquotes}
+
+\usepackage[backend=biber, style=nature]{biblatex} % biblatex in Verbindung mit biber macht mir meine Quellenangaben
+
+\usepackage[onehalfspacing]{setspace} % setspace setzt den Zeilenabstand auf 1.5
+\usepackage[left=30mm, right=25mm, top=25mm, bottom=25mm]{geometry}
+\usepackage[breaklinks=true]{hyperref}
 \usepackage{titling}
 \usepackage{fancyhdr}
-\usepackage[german=guillemets]{csquotes}
+
+\usepackage{amsmath} % Für Mathe
+\usepackage{amssymb}
+
+\usepackage{wrapfig}
 \usepackage{graphicx}
-\usepackage[breaklinks=true]{hyperref}
+
+\usepackage{lmodern}
+
 \usepackage{blindtext}
 % }}}
 
+\bibliography{main}
 \addbibresource{main.bib}
 
 
@@ -67,8 +78,8 @@ Klasse: \klasse\\
 
 \setcounter{page}{1}
 %}}}
+\textcite{test}
 
-
-%\printbibliography{}
+\printbibliography{}
 
 \end{document}
